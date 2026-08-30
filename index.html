@@ -4,55 +4,76 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Joe in IT</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <header>
-    <link rel="stylesheet" href="style.css">
-    <h1>Joe in IT</h1>
 
-    <nav>
-      <a href="#projects">Projects</a>
-      <a href="#homelab">Homelab</a>
-      <a href="#certifications">Certifications</a>
-      <a href="#notes">Notes</a>
-      <a href="#contact">Contact</a>
+  <aside class="sidebar">
+
+    <div class="profile">
+      <div class="profile-photo">
+        <span>JI</span>
+      </div>
+    </div>
+
+    <nav class="sidebar-nav">
+      <a class="active" href="/">Home</a>
+      <a href="#">Blog</a>
+      <a href="#">Homelab</a>
+      <a href="#">Resume</a>
+      <a href="#">Contact</a>
     </nav>
-  </header>
 
-  <main>
-    <section>
-      <h2>Networking. Infrastructure. Homelab.</h2>
+    <div class="sidebar-footer">
+
+      <a href="#" aria-label="GitHub" title="GitHub">
+        GitHub
+      </a>
+
+      <a href="#" aria-label="LinkedIn" title="LinkedIn">
+        LinkedIn
+      </a>
+
+      <button id="theme-toggle" aria-label="Toggle light and dark mode">
+        ☀
+      </button>
+
+    </div>
+
+  </aside>
+
+
+  <main class="content">
+
+    <section class="hero">
+
+      <div class="eyebrow">
+        NETWORKING · INFRASTRUCTURE · MAINE
+      </div>
+
+      <h1>I'm Joe.</h1>
+
+      <h2>
+        Networking. Wireless. Infrastructure. Homelab.
+      </h2>
+
       <p>
-        IT professional documenting projects, certifications,
-        troubleshooting notes, and things I learn along the way.
+        I build, troubleshoot, and learn how systems connect.
+        This is where I document projects, experiments,
+        technical notes, and things I'm working on.
       </p>
+
+      <div class="hero-buttons">
+        <a href="#" class="button primary">Get in touch</a>
+        <a href="#" class="button secondary">Read the blog</a>
+      </div>
+
     </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <p>Projects coming soon.</p>
-    </section>
-
-    <section id="homelab">
-      <h2>Homelab</h2>
-      <p>Homelab documentation coming soon.</p>
-    </section>
-
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <p>Certifications coming soon.</p>
-    </section>
-
-    <section id="notes">
-      <h2>Notes</h2>
-      <p>Technical notes and write-ups coming soon.</p>
-    </section>
-
-    <section id="contact">
-      <h2>Contact</h2>
-      <p>Contact information coming soon.</p>
-    </section>
   </main>
+
+  <script src="script.js"></script>
+
 </body>
 </html>
