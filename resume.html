@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume | Joe in IT</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="profile"><div class="profile-photo"><img src="headshot.jpg" alt="Joe"></div></div>
+    <nav class="sidebar-nav" aria-label="Main navigation">
+      <a href="index.html">Home</a><a href="blog.html">Blog</a><a href="homelab.html">Homelab</a><a class="active" href="resume.html" aria-current="page">Resume</a><a href="contact.html">Contact</a>
+    </nav>
+    <div class="sidebar-footer">
+      <a href="https://github.com/joeinit1" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 .7a11.3 11.3 0 0 0-3.6 22c.6.1.8-.3.8-.6v-2.2c-3.4.7-4.1-1.5-4.1-1.5-.5-1.4-1.4-1.8-1.4-1.8-1.1-.8.1-.8.1-.8 1.3.1 1.9 1.3 1.9 1.3 1.1 1.9 2.9 1.4 3.6 1 .1-.8.4-1.4.8-1.7-2.7-.3-5.5-1.3-5.5-5.9 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.3 0 0 1-.3 3.3 1.2a11 11 0 0 1 6 0C16.2 4.4 17.2 4.7 17.2 4.7c.6 1.7.2 3 .1 3.3.8.8 1.2 1.9 1.2 3.2 0 4.6-2.8 5.6-5.5 5.9.4.4.8 1.1.8 2.2v3.3c0 .3.2.7.8.6A11.3 11.3 0 0 0 12 .7Z"/></svg></a>
+      <a href="https://www.linkedin.com/in/joeinit" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5.3 3.3A2.3 2.3 0 1 1 .7 3.3a2.3 2.3 0 0 1 4.6 0ZM1.1 8h4.4v14H1.1V8Zm7 0h4.2v1.9h.1c.6-1.1 2-2.3 4.2-2.3 4.5 0 5.3 3 5.3 6.8V22h-4.4v-6.7c0-1.6 0-3.7-2.3-3.7s-2.7 1.8-2.7 3.6V22H8.1V8Z"/></svg></a>
+      <button class="theme-toggle" type="button" aria-label="Toggle light and dark mode" title="Toggle theme">☀</button>
+    </div>
+  </aside>
+  <main class="content">
+    <section class="page-section resume-page">
+      <div class="eyebrow">SKILLS · CERTIFICATIONS · EXPERIENCE</div>
+      <h1>Resume</h1>
+      <p class="page-intro">Networking and security professional focused on wireless, infrastructure, troubleshooting, and hands-on learning.</p>
+
+      <div class="resume-grid">
+        <section class="resume-block">
+          <h2>Certifications</h2>
+          <ul class="clean-list">
+            <li><strong>Cisco CCNA</strong><span>Networking fundamentals, routing, switching, and infrastructure</span></li>
+            <li><strong>CompTIA CySA+</strong><span>Security analytics, threat detection, and response</span></li>
+            <li><strong>CompTIA Security+</strong><span>Core security concepts, controls, and operations</span></li>
+          </ul>
+        </section>
+
+        <section class="resume-block">
+          <h2>Technical focus</h2>
+          <div class="tag-list" aria-label="Technical skills">
+            <span>Networking</span><span>Wireless</span><span>Infrastructure</span><span>Troubleshooting</span><span>Security</span><span>DNS</span><span>Virtualization</span><span>Containers</span><span>Monitoring</span>
+          </div>
+        </section>
+
+        <section class="resume-block">
+          <h2>Homelab experience</h2>
+          <p>Building and maintaining a practical lab environment for virtualization, DNS filtering, containerized services, and availability monitoring.</p>
+          <ul class="detail-list"><li>Proxmox virtualization</li><li>Pi-hole DNS filtering</li><li>Docker services</li><li>Uptime Kuma monitoring</li></ul>
+        </section>
+
+        <section class="resume-block resume-cta">
+          <h2>Professional profile</h2>
+          <p>For current work history, education, and professional updates, visit my LinkedIn profile.</p>
+          <a class="button primary" href="https://www.linkedin.com/in/joeinit" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
+        </section>
+      </div>
+    </section>
+  </main>
+  <script src="./script.js"></script>
+</body>
+</html>
