@@ -1,2 +1,0 @@
-# joeinit
-Joe in IT
