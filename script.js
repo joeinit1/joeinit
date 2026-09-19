@@ -5,6 +5,10 @@ const activeTheme = savedTheme || "dark";
 document.body.classList.toggle("dark", activeTheme === "dark");
 
 function updateThemeButton() {
+  if (!themeToggle) {
+    return;
+  }
+
   const darkMode = document.body.classList.contains("dark");
 
   themeToggle.textContent = darkMode ? "☾" : "☀";
@@ -27,10 +31,6 @@ if (themeToggle) {
 }
 
 
-/*
- * Contact form
- */
-
 const contactForm = document.getElementById("contact-form");
 
 if (contactForm) {
@@ -41,14 +41,13 @@ if (contactForm) {
   contactForm.addEventListener("submit", async (event) => {
     event.preventDefault();
 
-    /*
-     * Honeypot spam protection
-     */
     if (spamField && spamField.value) {
       return;
     }
 
-    status.textContent = "Sending...";
+    if (status) {
+      status.textContent = "Sending...";
+    }
 
     if (submitButton) {
       submitButton.disabled = true;
@@ -67,26 +66,31 @@ if (contactForm) {
       });
 
       if (response.ok) {
-        status.textContent = "Thanks! Your message has been sent.";
+        if (status) {
+          status.textContent = "Thanks! Your message has been sent.";
+        }
 
         contactForm.reset();
       } else {
         const data = await response.json();
 
-        if (data.errors) {
-          status.textContent = data.errors
-            .map((error) => error.message)
-            .join(", ");
-        } else {
-          status.textContent =
-            "Something went wrong. Please try again.";
+        if (status) {
+          if (data.errors) {
+            status.textContent = data.errors
+              .map((error) => error.message)
+              .join(", ");
+          } else {
+            status.textContent = "Something went wrong. Please try again.";
+          }
         }
       }
     } catch (error) {
       console.error("Contact form error:", error);
 
-      status.textContent =
-        "Unable to send your message. Please try again.";
+      if (status) {
+        status.textContent =
+          "Unable to send your message. Please try again.";
+      }
     } finally {
       if (submitButton) {
         submitButton.disabled = false;
