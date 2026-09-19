@@ -1,5 +1,5 @@
 :root { --bg:#f7f7f5; --sidebar:#efefec; --text:#1f2328; --muted:#667085; --border:#d7d7d2; --accent:#3b82f6; --active:#deded9; }
-body.dark { --bg:#17191d; --sidebar:#202328; --text:#f5f5f5; --muted:#a6adb7; --border:#34383f; --accent:#60a5fa; --active:#2c3036; }
+body.dark { --bg:#17191d; --sidebar:#202328; --text:#f5f5f5; --muted:#a6adb7; --border:#34383f; --accent:#3b82f6; --active:#2c3036; }
 
 * { box-sizing:border-box; }
 html { scroll-behavior:smooth; background:#17191d; color-scheme:light dark; }
